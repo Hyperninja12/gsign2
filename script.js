@@ -11,7 +11,7 @@ function onSignIn(googleUser) {
 
     if (id_token) {
         console.log('Redirecting...');
-        window.location.href = 'https://hyperninja12.github.io/Ash_Porfolio/'; 
+        window.location.href = 'https://hyperninja12.github.io/Ash_Porfolio/portfolio.html'; 
     } else {
         console.error('ID Token is missing. User may not be signed in properly.');
     }
