@@ -14,7 +14,7 @@ function onSignIn(googleUser) {
     if (id_token) {
         console.log('Redirecting...');
         // Use the page you want to redirect to after sign-in
-        window.location.href = 'https://hyperninja12.github.io/Ash_Porfolio/'; 
+        window.location.href = 'https://google.com'; 
     } else {
         console.error('ID Token is missing. User may not be signed in properly.');
     }
