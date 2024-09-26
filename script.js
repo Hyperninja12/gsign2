@@ -22,16 +22,19 @@ function onSignIn(googleUser) {
       }
     });
   }
-  function onSignIn(googleUser) {
+  
+function onSignIn(googleUser) {
     // Get the ID token from the Google User object
     const profile = googleUser.getBasicProfile();
     const id_token = googleUser.getAuthResponse().id_token;
 
     console.log('ID Token: ' + id_token); // Log the ID token for verification
 
-    // Here, you can store the token or use it for further API calls
-
-    // Redirect to your desired page after successful sign-in
-    window.location.href = 'https://hyperninja12.github.io/Ash_Porfolio/'; // Replace with the actual page you want to redirect to
+    if (id_token) {
+        // If the ID token exists, proceed with the redirection
+        console.log('User is signed in. Redirecting...');
+        window.location.href = 'https://hyperninja12.github.io/Ash_Porfolio/'; // Replace with your actual page
+    } else {
+        console.error('ID Token is missing. User may not be signed in properly.');
+    }
 }
-  
